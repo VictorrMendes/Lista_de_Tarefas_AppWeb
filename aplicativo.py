@@ -2,6 +2,7 @@ from fasthtml.common import *
 from componentes import *
 
 
+
 app, routes = fast_app()
 
 lista_tarefas = []
@@ -27,8 +28,5 @@ def deletar(posicao: int):
         lista_tarefas.pop(posicao)
     return gerar_lista_tarefas(lista_tarefas)
 
-@routes("/blog")
-def homepage():
-    return gerar_titulo("Homepage","Lista To_do")
 
 serve()
